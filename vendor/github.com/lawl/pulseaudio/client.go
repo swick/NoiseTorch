@@ -76,11 +76,13 @@ func NewClient(addressArr ...string) (*Client, error) {
 
 	go c.processPackets()
 
+/*
 	err = c.auth()
 	if err != nil {
 		c.Close()
 		return nil, err
 	}
+*/
 
 	err = c.setName()
 	if err != nil {
